@@ -208,36 +208,129 @@
 
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Стрижка ножницами</span>
+                                <span class="radio__label">Стрижка ножницами</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Стрижка машинкой</span>
+                                <span class="radio__label">Стрижка машинкой</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Стрижка + стрижка бороды</span>
+                                <span class="radio__label">Стрижка + Стрижка бороды</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Стрижка + моделирование бороды</span>
+                                <span class="radio__label">Стрижка + Моделирование бороды</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Бритье головы</span>
+                                <span class="radio__label">Бритье головы</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Укладка</span>
+                                <span class="radio__label">Укладка</span>
                             </label>
                             <label class="radio">
                                 <input class="radio__input" type="radio" name="service">
-                                <span>Оформление бровей</span>
-                            </label>    
+                                <span class="radio__label">Оформление бровей</span>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="reserve__fieldset">
+                            <legend class="reserve__legend">Специалист</legend>
+
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="spec">
+                                <span class="radio__label">Игорь</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="spec">
+                                <span class="radio__label">Анатолий</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="spec">
+                                <span class="radio__label">Руслан</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="spec">
+                                <span class="radio__label">Михаил</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="spec">
+                                <span class="radio__label">Евгений</span>
+                            </label>
+                        </fieldset>
+                        
+                        <legend class="reserve__legend">Дата и время</legend>
+
+                            <fieldset class="reserve__fieldset reserve__fieldset-sub">
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="month">
+                                    <span class="radio__label">Январь</span>
+                                </label>
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="month">
+                                    <span class="radio__label">Февраль</span>
+                                </label>
+                                <label class="radio">
+                                    <input class="radio__input" type="radio" name="month">
+                                    <span class="radio__label">Март</span>
+                                </label>
+                            </fieldset>
+
+                        <fieldset class="reserve__fieldset reserve__fieldset-sub">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="day">
+                                <span class="radio__label">18 января</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="day">
+                                <span class="radio__label">19 января</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="day">
+                                <span class="radio__label">20 января</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="day">
+                                <span class="radio__label">21 января</span>
+                            </label>
+                        </fieldset>     
+
+                        <fieldset class="reserve__fieldset reserve__fieldset-sub">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">10:00-11:30</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">11:30-13:00</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">13:00-14:30</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">14:00-16:00</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">16:00-17:00</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">17:30-19:00</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="time">
+                                <span class="radio__label">19:00-21:30</span>
+                            </label>
                         </fieldset>
                     </div>
-                </form>
 
+                    <button class="reserve__btn main-link">Записаться</button>
+                </form>
             </div>
         </section>
 
@@ -251,7 +344,32 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer__full">
+                <div class="footer__full-left">
+                    <img class="footer__logo" src="img/logo.svg" alt="logo barber-shop Chik-chik">
+                    <p class="footer__copyright">© chik chik, 2023</p>
+                </div>
 
+                <div class="footer__full-center">
+                    <nav class="footer__navigation navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#price">Стоимость услуг</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a class="navigation__link" href="#about">О нас</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__full-right">
+                    <ul class="author__list">
+                        <li class="author__item">Designer: Anastasia Ilina</li>
+                        <li class="author__item">Developer: Tatiana Osipova</li>
+                    </ul>
+                </div>
+            </div>            
         </div>
     </footer>
 
