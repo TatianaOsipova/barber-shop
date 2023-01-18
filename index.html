@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbershop "Chik-chik"</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/main-link.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,19 +18,21 @@
     <!-- header start -->
 
     <header class="header">
-        <div class="container header__container">
-            <img class="header__logo" src="img/logo.svg" alt="logo barber-shop Chik-chik">
-            <nav class="header__navigation navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#price">Стоимость услуг</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="#about">О нас</a>
-                    </li>
-                </ul>
-            </nav>
-            <a class="header__link main-link" href="#reserve">Записаться</a>
+        <div class="container">
+            <div class="header__container">
+                <img class="header__logo" src="img/logo.svg" alt="logo barber-shop Chik-chik">
+                <nav class="header__navigation navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#price">Стоимость услуг</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#about">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__link main-link" href="#reserve">Записаться</a>
+            </div>
         </div>
     </header>
 
@@ -261,23 +267,23 @@
                                 <span class="radio__label">Евгений</span>
                             </label>
                         </fieldset>
-                        
+
                         <legend class="reserve__legend">Дата и время</legend>
 
-                            <fieldset class="reserve__fieldset reserve__fieldset-sub">
-                                <label class="radio">
-                                    <input class="radio__input" type="radio" name="month">
-                                    <span class="radio__label">Январь</span>
-                                </label>
-                                <label class="radio">
-                                    <input class="radio__input" type="radio" name="month">
-                                    <span class="radio__label">Февраль</span>
-                                </label>
-                                <label class="radio">
-                                    <input class="radio__input" type="radio" name="month">
-                                    <span class="radio__label">Март</span>
-                                </label>
-                            </fieldset>
+                        <fieldset class="reserve__fieldset reserve__fieldset-sub">
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="month">
+                                <span class="radio__label">Январь</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="month">
+                                <span class="radio__label">Февраль</span>
+                            </label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="month">
+                                <span class="radio__label">Март</span>
+                            </label>
+                        </fieldset>
 
                         <fieldset class="reserve__fieldset reserve__fieldset-sub">
                             <label class="radio">
@@ -296,7 +302,7 @@
                                 <input class="radio__input" type="radio" name="day">
                                 <span class="radio__label">21 января</span>
                             </label>
-                        </fieldset>     
+                        </fieldset>
 
                         <fieldset class="reserve__fieldset reserve__fieldset-sub">
                             <label class="radio">
@@ -330,7 +336,7 @@
                         </fieldset>
                     </div>
 
-                    <button class="reserve__btn main-link">Записаться</button>
+                    <button class="reserve__btn main-link" disabled>Записаться</button>
                 </form>
             </div>
         </section>
@@ -370,7 +376,7 @@
                         <li class="author__item">Developer: Tatiana Osipova</li>
                     </ul>
                 </div>
-            </div>            
+            </div>
         </div>
     </footer>
 
