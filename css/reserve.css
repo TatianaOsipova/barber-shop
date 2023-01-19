@@ -31,23 +31,31 @@
 .reserve__fieldset {
     padding: 0;
     border: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 72px;
+    gap: 8px;
 }
 
-.reserve__legend {}
-
-.reserve__fieldset-sub {}
-
-.reserve__btn {}
-
-.main-link {}
-
-
-
-/* .reserve{
-    padding: 62px 0;
+.reserve__fieldset:last-child {
+    margin-bottom: 0;
 }
 
-@media(max-width: 768px) {
+.reserve__legend {
+    flex-basis: 100%;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.reserve__fieldset-sub {
+    flex-basis: 100%;
+    margin-bottom: 24px;
+}
+
+/* @media(max-width: 768px) {
     .reserve {
         padding: 40px 0;
     }
