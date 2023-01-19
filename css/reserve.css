@@ -1,5 +1,5 @@
 .reserve {
-    padding: 62px 0 124px;
+    padding: 62px 0;
 }
 
 .reserve__title {
@@ -55,14 +55,39 @@
     margin-bottom: 24px;
 }
 
-/* @media(max-width: 768px) {
+@media(max-width: 768px) {
     .reserve {
         padding: 40px 0;
+    }
+
+    .reserve__title {
+        font-size: 32px;
+    }
+
+    .reserve__list {
+        margin: 0 0 40px;
+    }
+
+    .reserve__fieldset {
+        margin: 0 0 40px;
     }
 }
 
 @media(max-width: 560px) {
-    .reserve{
+    .reserve {
         padding: 32px 0;
     }
-} */
+
+    .reserve__title {
+        font-size: 20px;
+    }
+
+    .reserve__list {
+        font-size: 12px;
+        margin: 0 0 32px;
+    }
+
+    .reserve__fieldset {
+        margin: 0 0 32px;
+    }
+}
