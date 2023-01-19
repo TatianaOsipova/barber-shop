@@ -1,0 +1,14 @@
+.reserve{
+    padding: 62px 0;
+}
+
+@media(max-width: 768px) {
+    .reserve {
+        padding: 40px 0;
+    }
+
+@media(max-width: 560px) {
+    .reserve{
+        padding: 32px 0;
+    }
+}
