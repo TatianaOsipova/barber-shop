@@ -13,9 +13,7 @@
 .reserve__list {
     padding-left: 24px;
     margin: 0 0 72px;
-
-
-
+    line-height: 1.5;
 }
 
 .reserve__item {
@@ -26,11 +24,14 @@
     margin-bottom: 0;
 }
 
-.reserve__form {}
+.reserve__form-container {
+    margin-bottom: 40px;
+}
 
-.reserve__form-container {}
-
-.reserve__fieldset {}
+.reserve__fieldset {
+    padding: 0;
+    border: none;
+}
 
 .reserve__legend {}
 
