@@ -88,7 +88,6 @@
 
     .about__list{
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-
     }
 
     .about__item{
@@ -113,24 +112,20 @@
 
     .about__title {
         font-size: 20px;
+        margin-bottom: 16px;
     }
 
     .about__desctiption {
-        font-size: 12px;
-        margin-bottom: 32px;
+        font-size: 12px;        
     }
 
-    .about__list {
-        flex-direction: column;
-    }       
-
-    .about__item-image {
-        width: 64px;
-        height: 64px;
+    .about__list{        
+        grid-template-columns: minmax(272px, 1fr);
     }
-
-    .about__item-content{
-        width: 272px;
-        margin: 0;
-    }    
+    
+    .about__item{
+        padding-left: 72px;
+        min-height: 64px;
+        background-size: 64px;
+    }
 }  
