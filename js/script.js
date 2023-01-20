@@ -1,3 +1,13 @@
+const API_URL = 'https://industrious-cat-ladybug.glitch.me/';
+
+// GET /api - получить список услуг
+// GET /api?service={n} - получить список барберов
+// GET /api?spec={n} - получить список месяца работы барбера
+// GET /api?spec={n}&month={n} - получить список дней работы барбера
+// GET /api?spec={n}&month={n}&day={n} - получить список свободных часов барбера
+// POST /api/order - оформить заказ
+
+
 const addPreload = (elem) => {
     elem.classList.add('preload')
 };
@@ -86,6 +96,16 @@ const initSlider = () => {
 
         startSlider(slider);
     });
+};
+
+const initService = () => {
+
+};
+
+const init = 0 => {
+    initSlider();
+    initService();
+
 };
 
 window.addEventListener('DOMContentLoaded', initSlider);
