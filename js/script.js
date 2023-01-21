@@ -1,4 +1,4 @@
-const API_URL = 'https://industrious-cat-ladybug.glitch.me/';
+const API_URL = 'https://industrious-cat-ladybug.glitch.me/api';
 
 // GET /api - получить список услуг
 // GET /api?service={n} - получить список барберов
@@ -98,17 +98,46 @@ const initSlider = () => {
     });
 };
 
-const initService = () => {
 
+const renderPrice = (wrapper, data) => {
+    data.forEach((item) => {
+        const priceItem = document.createElement('li');
+        priceItem.classList.add('price__item');
+
+        priceItem.innerHTML = `
+            <span class="price__item-title">${item.name}</span>                                
+            <span class="price__item-count">${item.price} руб</span>        
+        `;
+
+        wrapper.append(priceItem)
+    });       
 };
 
-const init = 0 => {
+const initService = () => {
+    const priceList = document.querySelector('.price__list');
+    priceList.textContent = '';
+
+    addPreload(priceList);
+
+    fetch(API_URL)
+        .then(response => response.json())
+        .then(data => {        
+            renderPrice(priceList, data);
+            removePreload(priceList);   
+            return data;       
+        })
+        .then(data => {
+            renderService()
+        })
+};
+
+const init = () => {
     initSlider();
     initService();
 
 };
 
-window.addEventListener('DOMContentLoaded', initSlider);
+window.addEventListener('DOMContentLoaded', init);
 
 
 
