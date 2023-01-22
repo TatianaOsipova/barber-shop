@@ -208,6 +208,21 @@ const renderDay = (wrapper, data, month) => {
     wrapper.append(...labels);
 };
 
+const renderTime = (wrapper, data) => {
+    // data.sort((a, b) => a > b ? 1 : -1);
+    const labels = data.map(time => {
+        const label = document.createElement('label')
+        label.classList.add('radio');
+        label.innerHTML = `
+        <input class="radio__input" type="radio" name="time" value="${time}">
+        <span class="radio__label">${time}</span>
+        `;
+        return label;
+    });
+   
+    wrapper.append(...labels);
+};
+
 const initReserve = () => {
     const reserveForm = document.querySelector('.reserve__form');
     const { fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn } = 
@@ -259,21 +274,25 @@ const initReserve = () => {
             removeDisabled([fieldday])
         }
 
-        if(target.name === 'month') {
-            addDisabled([fieldday, fieldtime, btn]);
-            addPreload(fieldday);
+        if(target.name === 'day') {
+            addDisabled([fieldtime, btn]);
+            addPreload(fieldtime);
 
             const response = await fetch(
-                `${API_URL}/api?spec=${reserveForm.spec.value}&month=${reserveForm.month.value}`
+                `${API_URL}/api?spec=${reserveForm.spec.value}&month=${reserveForm.month.value}&day=${target.value}`
             );
             const data = await response.json();   
 
-            fieldday.textContent = '';
-            renderDay(fieldday, data, reserveForm.month.value);
-            removePreload(fieldday);
-            removeDisabled([fieldday])
+            fieldtime.textContent = '';
+            renderTime(fieldtime, data);
+            removePreload(fieldtime);
+            removeDisabled([fieldtime])
         }
-    })
+
+        if(target.name === 'time') {
+            removeDisabled([btn]);
+        }
+    });
 };
 
 const init = () => {

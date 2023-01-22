@@ -24,11 +24,7 @@
 .radio__input:focus+.radio__label,
 .radio__input:checked+.radio__label {
     color: #241D1C;
-    background: #F6F3E3;
-    background-image: var(--bg-image);
-    background-size: 36px;
-    background-position: 8px;
-    background-repeat: no-repeat;
+    background: #F6F3E3;    
 }
 
 .radio__input:disabled + .radio__label{
@@ -36,12 +32,27 @@
 }
 
 .radio__label-spec {
+    position: relative;
     padding-left: 52px;
+}
+
+.radio__label-spec:before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     background-image: var(--bg-image);
-    background-size: 36px;
-    background-position: 8px;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
+
+
 
 @media(max-width: 768px) {
     .radio__label {
@@ -54,8 +65,13 @@
         background-size: 24px;
     }
 
-    .radio__input:focus+.radio__label,
+    /* .radio__input:focus+.radio__label,
     .radio__input:checked+.radio__label {        
         background-size: 24px;        
+    } */
+
+    .radio__label-spec:before{
+        width: 24px;
+        height: 24px;
     }
 }
