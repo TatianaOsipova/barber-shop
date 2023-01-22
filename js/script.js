@@ -1,4 +1,4 @@
-const API_URL = 'https://industrious-cat-ladybug.glitch.me/api';
+const API_URL = 'https://industrious-cat-ladybug.glitch.me/';
 
 // GET /api - получить список услуг
 // GET /api?service={n} - получить список барберов
@@ -122,12 +122,10 @@ const renderService = (wrapper, data) => {
             <span class="radio__label">${item.name}</span>
         `;
         return label;
-    })
-
-    console.log(labels);
-
-}
-
+    });
+   
+    wrapper.append(...labels);
+};
 
 
 const initService = () => {
@@ -139,7 +137,7 @@ const initService = () => {
     reserveFieldsetService.innerHTML = '<legend class="reserve__legend">Услуга</legend>';
     addPreload(reserveFieldsetService);
 
-    fetch(API_URL)
+    fetch(`${API_URL}/api`)
         .then(response => response.json())
         .then(data => {        
             renderPrice(priceList, data);
@@ -152,10 +150,61 @@ const initService = () => {
         })
 };
 
+const addDisabled = (arr) => {
+    arr.forEach(elem => {
+        elem.disabled = true;
+    });
+};
+
+const removeDisabled = (arr) => {
+    arr.forEach((elem) => {
+        elem.disabled = false;
+    });    
+};
+
+const renderSpec = (wrapper, data) => {
+    const labels = data.map(item => {
+        const label = document.createElement('label')
+        label.classList.add('radio');
+        label.innerHTML = `
+        <input class="radio__input" type="radio" name="spec" value="${item.id}">
+        <span class="radio__label radio__label-spec" style="--bg-image: url(${API_URL}${item.img})">${item.name}</span>
+        `;
+        return label;
+    });
+   
+    wrapper.append(...labels);
+};
+
+const initReserve = () => {
+    const reserveForm = document.querySelector('.reserve__form');
+    const { fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn } = 
+        reserveForm;
+    
+    addDisabled([fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn]);
+
+    reserveForm.addEventListener('change', async event => {
+        const target = event.target;
+
+        if(target.name === 'service') {
+            addDisabled([fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn]);
+            fieldspec.innerHTML = '<legend class="reserve__legend">Специалист</legend>';
+            addPreload(fieldspec);
+
+            const response = await fetch(`${API_URL}/api?service=${target.value}`)
+            const data = await response.json();            
+
+            renderSpec(fieldspec, data);
+            removePreload(fieldspec);
+            removeDisabled([fieldspec])
+        }
+    })
+};
+
 const init = () => {
     initSlider();
     initService();
-
+    initReserve();
 };
 
 window.addEventListener('DOMContentLoaded', init);
