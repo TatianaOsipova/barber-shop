@@ -15,6 +15,10 @@
     text-transform: uppercase;
 }
 
+.navigation__link:hover{
+    color: rgb(242, 117, 7);
+}
+
 @media(max-width: 560px){
     .navigation__list{
         gap: 16px;
