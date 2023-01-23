@@ -34,7 +34,7 @@
     padding: 0;
     margin: 0 0 62px;
     list-style: none;
-    width: 592px;
+    width: 672px;
 }
 
 .price__item {
@@ -96,11 +96,12 @@
     .price__tagline {
         font-size: 12px;
         margin-bottom: 24px;
-    }
+    }  
 
     .price__list {  
         font-size: 12px;      
-        margin-bottom: 24px;
+        margin-bottom: 24px;        
+        width: 372px;
     }
 
     .price__item {
