@@ -39,8 +39,8 @@ const startSlider = () => {
         } else {
             btnPrevSlide.style.display = '';
         }
-    };
-
+    }; 
+    
     checkSlider();
 
     const nextSlide = () => {
@@ -57,7 +57,7 @@ const startSlider = () => {
 
     const prevSlide = () => {
         sliderItems[activeSlide]?.classList.remove('slider__item-active');
-        position = -sliderItems[0].clientWidth * (activeSlide -2);
+        position = -sliderItems[0].clientWidth * (activeSlide - 2);
 
         sliderList.style.transform = `translateX(${position}px)`;
 
